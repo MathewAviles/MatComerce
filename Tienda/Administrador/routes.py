@@ -6,6 +6,6 @@ from Tienda import app, db
 def home():
     return "Pagina de inicio de mi aplicación web"
 
-@app.route('/registro')
+@app.route('registro')
 def registro():
     return render_template('Administrador/registro.html',title="Registro Administrador")
