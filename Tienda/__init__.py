@@ -9,4 +9,4 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///matcomerce.db"
 db = SQLAlchemy(app)
 
 
-from Tienda import routes
+from Tienda.Administrador import routes
