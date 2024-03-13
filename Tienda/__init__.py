@@ -14,10 +14,12 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URL")
 # initialize the app with the extension
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+bcrypt = Bcrypt(app)
 
 # encriptación del sistema de logeo
 app.config['SECRET_KEY']='MATcomerce159753%&ñ'
-bcrypt = Bcrypt(app)
+
 
 
 from Tienda.Administrador import routes
+   
