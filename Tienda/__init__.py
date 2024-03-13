@@ -7,7 +7,7 @@ import os
 load_dotenv()  # take environment variables from .env.
 
 # create the app
-app = Flask(__name__)
+app = Flask(__name__,template_folder='Templates')
 # configure the SQLite database, relative to the app instance folder
 #app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///matcomerce.db"
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("SQLALCHEMY_DATABASE_URL")
