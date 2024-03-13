@@ -8,7 +8,8 @@ import os
 
 @app.route('/')
 def home():
-    return render_template('Administrador/index.html', title="Inicio Administrador")
+    form = RegistrationForm(request.form)
+    return render_template('Administrador/registro.html', title="Inicio Administrador", form=form)
 
 
 
