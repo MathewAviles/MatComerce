@@ -7,7 +7,7 @@ from flask_bcrypt import generate_password_hash
 import os
 
 @app.route('/')
-def home():
+def index():
     return render_template('administrador/index.html', title="Inicio Administrador")
 
 
@@ -26,7 +26,7 @@ def registro():
             db.session.add(user)
             db.session.commit()  # Guardar cambios en la base de datos
             flash(f'{form.username.data} Gracias por registrarte', 'success')
-            return redirect(url_for('home'))
+            return redirect(url_for('index'))
         except IntegrityError:
             # Manejar la excepción de violación de unicidad
             db.session.rollback()  # Revertir los cambios
