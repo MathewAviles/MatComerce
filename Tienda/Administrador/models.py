@@ -1,6 +1,7 @@
 from Tienda import db, app
 from sqlalchemy import Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
+import os
 
 
 class User(db.Model):
