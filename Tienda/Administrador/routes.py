@@ -13,7 +13,7 @@ def home():
 
 
 
-@app.route('/registro', methods=['GET', 'POST'])
+@app.route('/registro', methods=["GET", "POST"])
 def registro():
     form = RegistrationForm(request.form)
     if request.method == 'POST' and form.validate():
