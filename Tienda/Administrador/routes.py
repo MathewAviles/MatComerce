@@ -8,7 +8,7 @@ import os
 
 @app.route('/')
 def home():
-    return render_template('Administrador/index.html', title="Inicio Administrador")
+    return render_template('administrador/index.html', title="Inicio Administrador")
 
 
 
@@ -31,7 +31,7 @@ def registro():
             # Manejar la excepción de violación de unicidad
             db.session.rollback()  # Revertir los cambios
             flash('El correo electrónico o el nombre de usuario ya están en uso.', 'error')
-            return render_template('Administrador/registro.html', title="Registro Administrador", form=form)
-    return render_template('Administrador/registro.html', title="Registro Administrador", form=form)
+            return render_template('administrador/registro.html', title="Registro Administrador", form=form)
+    return render_template('administrador/registro.html', title="Registro Administrador", form=form)
 
 
