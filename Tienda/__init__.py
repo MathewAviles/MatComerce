@@ -4,6 +4,7 @@ from flask_bcrypt import Bcrypt
 from dotenv import load_dotenv
 from flask_migrate import Migrate
 import os
+load_dotenv()  # take environment variables from .env.
 
 # create the app
 app = Flask(__name__)
